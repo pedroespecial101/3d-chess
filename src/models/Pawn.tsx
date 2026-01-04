@@ -1,18 +1,19 @@
-import React, { useRef } from 'react'
 import type { FC } from 'react'
+import React from 'react'
 
-import { useGLTF } from '@react-three/drei'
-import type * as THREE from 'three'
-import type { GLTF } from 'three-stdlib'
-
-import { DalekModel } from './Dalek'
 import { ModelProps } from './index'
+import { DalekModel } from './Dalek'
+import { K9Model } from './K9'
 
 export const PawnModel: FC<ModelProps> = (props) => {
-  return <DalekModel {...props} />
+  // Doctor Who side (white) uses K-9, Enemy side (black) uses Daleks
+  return props.color === `white` ? (
+    <K9Model {...props} />
+  ) : (
+    <DalekModel {...props} />
+  )
 }
 
-export const PawnPreload = () => {
+export const PawnPreload = (): null => {
   return null
 }
-

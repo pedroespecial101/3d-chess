@@ -2,6 +2,18 @@
 
 ## [2026-01-04]
 ### Added
+- Integrated K-9 (Doctor Who's robot dog) model for white side pawns.
+- Added `K9.tsx` component with optimized asset loading and metallic materials.
+- Established side-specific model pattern: white pawns use K-9, black pawns use Daleks.
+
+### Changed
+- Refactored `Pawn.tsx` to conditionally render models based on piece color.
+- K-9 scale set to 180 to match other pieces.
+
+---
+
+## [2026-01-04] (Earlier)
+### Added
 - Integrated Dalek pawn models into the 3D chess board as replacement pawns.
 - Added `isFullModel` support to `MeshWrapper` to allow complex 3D models alongside standard pieces.
 - Added `Dalek.tsx` component with optimized asset loading and metallic materials.
